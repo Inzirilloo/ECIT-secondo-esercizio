@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(230, 173, 192);
+  }
+
+.titolo {
+  text-align: center;
+  color: #e52062;
+
+  }
+
+h2 {
+  text-align: left;
+  color: #2c93c0;
+}
+
+form {
+  width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+/* hashtag per gli id */
+
+#nome {
+  color: #e52027;
+}
+
+#big-blue.large.blue{
+  font-size: 200%;
+  color: #202ae5;
+
+}
+
+/* 
+
+h1.large-heading{
+  font-size: 200%;
+}
+*/
