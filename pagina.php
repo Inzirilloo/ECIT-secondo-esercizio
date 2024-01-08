@@ -20,22 +20,28 @@ function test_input($data)
       $data = htmlspecialchars($data);
       return $data;
     }
-
+    echo "<h2>Your Input:</h2>";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["nome"])) {
           $nomeErr = "Name is required";
+          echo "$nomeErr";
         } else {
           $nome = test_input($_POST["nome"]);
+          if (strlen(trim($nome)) == 0){
+            $nomeErr = "Only space is not a name";
+            echo "$nomeErr";
+          }
           if (!preg_match("/^[a-zA-Z-' ]*$/",$nome)) {
             $nomeErr = "Only letters and white space allowed";
+            echo "$nomeErr";
           }
+          else {
+            echo "$nome";
+          }
+
         }
-        
       }
      
-    echo "<h2>Your Input:</h2>";
-    echo $nome;
-    echo $nomeErr;
     echo "<br>";
 
     echo "<h2>Numeri da 1 a 10</h2>";
